@@ -18,6 +18,7 @@ import { ADDRESS_SIMILARITY_THRESHOLD, AddressMatch, AddressSimilarity, AddressT
 import { processInputSignatures, Sighash, SigInfo, SighashLabels } from '@app/shared/transaction.utils';
 import { ActivatedRoute } from '@angular/router';
 import { SighashFlag } from '@app/shared/transaction.utils';
+import {ViewAmountMode} from "@components/amount/amount.component";
 
 @Component({
   selector: 'app-transactions-list',
@@ -439,10 +440,10 @@ export class TransactionsListComponent implements OnInit, OnChanges, OnDestroy {
     if (this.network === 'liquid' || this.network === 'liquidtestnet') {
       return;
     }
-    const modes = ['btc', 'sats', 'fiat'];
+    const modes = ['bgl', 'sats', 'fiat'];
     const oldIndex = modes.indexOf(this.stateService.viewAmountMode$.value);
     const newIndex = (oldIndex + 1) % modes.length;
-    this.stateService.viewAmountMode$.next(modes[newIndex] as 'btc' | 'sats' | 'fiat');
+    this.stateService.viewAmountMode$.next(modes[newIndex] as ViewAmountMode);
     this.storageService.setValue('view-amount-mode', modes[newIndex]);
   }
 

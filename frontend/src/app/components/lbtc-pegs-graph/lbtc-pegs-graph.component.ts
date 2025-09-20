@@ -40,7 +40,7 @@ export class LbtcPegsGraphComponent implements OnInit, OnChanges {
   adjustedRight: number;
   selected = {
     'LBTC': true,
-    'BTC': true,
+    'BGL': true,
     'USD': false,
   };
 
@@ -126,7 +126,7 @@ export class LbtcPegsGraphComponent implements OnInit, OnChanges {
             icon: 'roundRect',
           },
           {
-            name: 'BTC',
+            name: 'BGL',
             inactiveColor: 'var(--grey)',
             textStyle: {
               color: 'white',
@@ -235,7 +235,7 @@ export class LbtcPegsGraphComponent implements OnInit, OnChanges {
         },
         {
           data: reservesSeries,
-          name: 'BTC',
+          name: 'BGL',
           yAxisIndex: 0,
           color: '#EA983B',
           type: 'line',
@@ -266,7 +266,7 @@ export class LbtcPegsGraphComponent implements OnInit, OnChanges {
   onLegendSelectChanged(e) {
     this.selected = e.selected;
     this.adjustedRight = this.selected['USD'] ? +this.right + 40 : +this.right;
-    this.adjustedLeft = this.selected['LBTC'] || this.selected['BTC'] ? +this.left : +this.left - 40;
+    this.adjustedLeft = this.selected['LBTC'] || this.selected['BGL'] ? +this.left : +this.left - 40;
 
     this.pegsChartOptions = {
       ...this.pegsChartOptions,

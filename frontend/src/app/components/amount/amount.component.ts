@@ -9,10 +9,11 @@ import { Price } from '@app/services/price.service';
   styleUrls: ['./amount.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+export type ViewAmountMode = 'bgl' | 'satoshi' | 'fiat'
 export class AmountComponent implements OnInit, OnDestroy {
   conversions$: Observable<any>;
   currency: string;
-  viewAmountMode$: Observable<'btc' | 'sats' | 'fiat'>;
+  viewAmountMode$: Observable<ViewAmountMode>;
   network = '';
 
   stateSubscription: Subscription;
