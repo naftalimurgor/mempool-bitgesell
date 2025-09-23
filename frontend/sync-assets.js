@@ -68,7 +68,7 @@ function download(filename, url) {
     response.pipe(fs.createWriteStream(filename));
   })
   .on('error', function(e) {
-    throw new Error(e);
+    // throw new Error(e);
   })
   .on('finish', () => {
     if (verbose) {

@@ -3,13 +3,15 @@ import { StateService } from '@app/services/state.service';
 import { Observable, Subscription } from 'rxjs';
 import { Price } from '@app/services/price.service';
 
+export type ViewAmountMode = 'bgl' | 'satoshi' | 'fiat'
+
 @Component({
   selector: 'app-amount',
   templateUrl: './amount.component.html',
   styleUrls: ['./amount.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export type ViewAmountMode = 'bgl' | 'satoshi' | 'fiat'
+
 export class AmountComponent implements OnInit, OnDestroy {
   conversions$: Observable<any>;
   currency: string;
