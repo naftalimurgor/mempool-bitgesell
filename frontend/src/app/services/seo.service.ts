@@ -10,7 +10,7 @@ import { StateService } from '@app/services/state.service';
 export class SeoService {
   network = '';
   baseTitle = 'mempool';
-  baseDescription = 'Explore the full Bitcoin ecosystem&reg; with The Mempool Open Source Project&reg;.';
+  baseDescription = 'Explore the full Bitgesell ecosystem&reg; with The Mempool Open Source Project&reg;.';
   baseDomain = 'mempool.space';
 
   canonicalLink: HTMLLinkElement = document.getElementById('canonical') as HTMLLinkElement;

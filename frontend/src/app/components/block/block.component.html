@@ -136,9 +136,9 @@
         <td class="td-width" i18n="block.median-fee">Median fee</td>
         <td>~<app-fee-rate [fee]="block.extras?.medianFee" rounding="1.0-0"></app-fee-rate>
           <span class="fiat">
-            <app-fiat [blockConversion]="blockConversion" [value]="block.extras?.medianFee * 140" digitsInfo="1.2-2"
-              i18n-ngbTooltip="Transaction fee tooltip" ngbTooltip="Based on average native segwit transaction of 140 vBytes"
-              placement="bottom"></app-fiat>
+<!--            <app-fiat [blockConversion]="blockConversion" [value]="block.extras?.medianFee * 140" digitsInfo="1.2-2"-->
+<!--              i18n-ngbTooltip="Transaction fee tooltip" ngbTooltip="Based on average native segwit transaction of 140 vBytes"-->
+<!--              placement="bottom"></app-fiat>-->
           </span>
         </td>
       </tr>
@@ -346,7 +346,7 @@
         </div>
         <div class="clearfix"></div>
         <div class="tx-skeleton">
-  
+
           <div class="header-bg box">
             <span class="skeleton-loader"></span>
           </div>

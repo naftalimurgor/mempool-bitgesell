@@ -187,7 +187,7 @@ export function uncompressDeltaChange(block: number, delta: MempoolBlockDeltaCom
   };
 }
 
-export function renderSats(value: number, network: string, mode: 'sats' | 'btc' | 'auto' = 'auto'): string {
+export function renderSats(value: number, network: string, mode: 'sats' | 'bgl' | 'auto' = 'auto'): string {
   let prefix = '';
   switch (network) {
     case 'liquid':
@@ -204,7 +204,7 @@ export function renderSats(value: number, network: string, mode: 'sats' | 'btc' 
       prefix = 's';
       break;
   }
-  if (mode === 'btc' || (mode === 'auto' && value >= 1000000)) {
+  if (mode === 'bgl' || (mode === 'auto' && value >= 1000000)) {
     return `${amountShortenerPipe.transform(value / 100000000, 2)} ${prefix}BTC`;
   } else {
     if (prefix.length) {

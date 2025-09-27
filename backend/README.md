@@ -28,9 +28,9 @@ latestrelease=$(curl -s https://api.github.com/repos/mempool/mempool/releases/la
 git checkout $latestrelease
 ```
 
-### 2. Configure Bitcoin Core
+### 2. Configure Bitgesell Core
 
-Turn on `txindex`, enable RPC, and set RPC credentials in `bitcoin.conf`:
+Turn on `txindex`, enable RPC, and set RPC credentials in `BGL.conf`:
 
 ```
 txindex=1
@@ -215,9 +215,9 @@ Mini script to generate random network activity (random TX count with random tx 
    do
       for y in $(seq 1 "$(jot -r 1 1 1000)")
       do
-         bitcoin-cli -regtest -named sendtoaddress address=$address amount=0.01 fee_rate=$(jot -r 1 1 100)
+         BGL-cli -regtest -named sendtoaddress address=$address amount=0.01 fee_rate=$(jot -r 1 1 100)
       done
-      bitcoin-cli -regtest generatetoaddress 1 $address
+      BGL-cli -regtest generatetoaddress 1 $address
       sleep 5
    done
    ```

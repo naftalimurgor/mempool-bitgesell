@@ -9,6 +9,7 @@ import { filter, map, scan, share, shareReplay } from 'rxjs/operators';
 import { StorageService } from '@app/services/storage.service';
 import { hasTouchScreen } from '@app/shared/pipes/bytes-pipe/utils';
 import { ActiveFilter } from '@app/shared/filters.utils';
+import {ViewAmountMode} from "@components/amount/amount.component";
 
 export interface MarkBlockState {
   blockHeight?: number;
@@ -192,7 +193,7 @@ export class StateService {
 
   live2Chart$ = new Subject<OptimizedMempoolStats>();
 
-  viewAmountMode$: BehaviorSubject<'btc' | 'sats' | 'fiat'>;
+  viewAmountMode$: BehaviorSubject<ViewAmountMode>;
   timezone$: BehaviorSubject<string>;
   connectionState$ = new BehaviorSubject<0 | 1 | 2>(2);
   isTabHidden$: Observable<boolean>;
@@ -364,7 +365,7 @@ export class StateService {
     this.hideAudit.subscribe((hide) => {
       this.storageService.setValue('audit-preference', hide ? 'hide' : 'show');
     });
-    
+
     const fiatPreference = this.storageService.getValue('fiat-preference');
     this.fiatCurrency$ = new BehaviorSubject<string>(fiatPreference || 'USD');
 
@@ -374,8 +375,8 @@ export class StateService {
     const blockDisplayModePreference = this.storageService.getValue('block-display-mode-preference');
     this.blockDisplayMode$ = new BehaviorSubject<string>(blockDisplayModePreference || 'fees');
 
-    const viewAmountModePreference = this.storageService.getValue('view-amount-mode') as 'btc' | 'sats' | 'fiat';
-    this.viewAmountMode$ = new BehaviorSubject<'btc' | 'sats' | 'fiat'>(viewAmountModePreference || 'btc');
+    const viewAmountModePreference = this.storageService.getValue('view-amount-mode') as ViewAmountMode;
+    this.viewAmountMode$ = new BehaviorSubject<ViewAmountMode>(viewAmountModePreference || 'bgl');
 
     const timezonePreference = this.storageService.getValue('timezone-preference');
     this.timezone$ = new BehaviorSubject<string>(timezonePreference || 'local');
@@ -510,6 +511,6 @@ export class StateService {
   focusSearchInputDesktop() {
     if (!hasTouchScreen()) {
       this.searchFocus$.next(true);
-    }    
+    }
   }
 }

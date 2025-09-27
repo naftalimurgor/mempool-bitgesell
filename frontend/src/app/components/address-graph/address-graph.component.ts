@@ -244,7 +244,7 @@ export class AddressGraphComponent implements OnChanges, OnDestroy {
         ],
         selected: this.selected,
         formatter: function (name) {
-          return name === 'Fiat' ? 'USD' : 'BTC';
+          return name === 'Fiat' ? 'USD' : 'BGL';
         }
       } : undefined,
       tooltip: {
