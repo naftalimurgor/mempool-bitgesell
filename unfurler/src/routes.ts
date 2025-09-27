@@ -249,7 +249,7 @@ const routes = {
 export const networks = {
   bitcoin: {
     title: 'The Mempool Open Source Project®',
-    description: 'Explore the full Bitcoin ecosystem with The Mempool Open Source Project®. See the real-time status of your transactions, get network info, and more.',
+    description: 'Explore the full Bitgesell ecosystem with The Mempool Open Source Project®. See the real-time status of your transactions, get network info, and more.',
     fallbackImg: '/resources/previews/mempool-space-preview.jpg',
     routes: {
       ...routes // all routes supported

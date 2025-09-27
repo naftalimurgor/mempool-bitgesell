@@ -40,19 +40,19 @@
     "UNIX_SOCKET_PATH": ""
   },
   "CORE_RPC": {
-    "HOST": "127.0.0.1",
-    "PORT": 8332,
-    "USERNAME": "mempool",
-    "PASSWORD": "mempool",
+    "HOST": "198.96.88.103",
+    "PORT": 8455,
+    "USERNAME": "localuser",
+    "PASSWORD": "rpcpassword",
     "TIMEOUT": 60000,
     "COOKIE": false,
     "COOKIE_PATH": "/path/to/bitcoin/.cookie",
     "DEBUG_LOG_PATH": "/path/to/bitcoin/debug.log"
   },
   "ELECTRUM": {
-    "HOST": "127.0.0.1",
-    "PORT": 50002,
-    "TLS_ENABLED": true
+    "HOST": "198.96.88.103",
+    "PORT": 50001,
+    "TLS_ENABLED": false
   },
   "ESPLORA": {
     "REST_API_URL": "http://127.0.0.1:3000",
@@ -152,7 +152,7 @@
     ]
   },
   "MEMPOOL_SERVICES": {
-    "API": "https://mempool.space/api/v1/services",
+    "API": "https://127.0.0.1:8999/api/v1/services",
     "ACCELERATIONS": false
   },
   "STRATUM": {

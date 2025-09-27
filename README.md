@@ -10,7 +10,7 @@ It is an open-source project developed and operated for the benefit of the Bitco
 
 # Installation Methods
 
-Mempool can be self-hosted on a wide variety of your own hardware, ranging from a simple one-click installation on a Raspberry Pi full-node distro all the way to a robust production instance on a powerful FreeBSD server. 
+Mempool can be hosted on a wide variety of your own hardware, ranging from a simple one-click installation on a Raspberry Pi full-node distro all the way to a robust production instance on a powerful FreeBSD server. 
 
 Most people should use a <a href="#one-click-installation">one  -click install method</a>.
 
