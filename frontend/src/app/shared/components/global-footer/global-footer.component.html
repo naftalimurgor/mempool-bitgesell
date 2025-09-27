@@ -8,7 +8,7 @@
             <img [src]="enterpriseInfo?.footer_img" [alt]="enterpriseInfo.title" height="60px" class="enterprise-logo">
           } @else {
             <app-svg-images *ngIf="officialMempoolSpace" name="officialMempoolSpace" viewBox="0 0 500 126"></app-svg-images>
-            <app-svg-images *ngIf="!officialMempoolSpace" name="mempoolSpace" viewBox="0 0 500 126"></app-svg-images>
+            <app-svg-images *ngIf="!officialMempoolSpace" name="bitgesell" viewBox="0 0 500 126" height="60px"></app-svg-images>
           }
         </div>
         @if (!enterpriseInfo?.footer_img) {
@@ -17,7 +17,7 @@
               <ng-container i18n="@@7deec1c1520f06170e1f8e8ddfbe4532312f638f">Explore the full Bitgesell ecosystem</ng-container>
               <ng-template [ngIf]="locale.substr(0, 2) === 'en'">&reg;</ng-template>
             } @else {
-              <ng-container i18n="shared.be-your-own-explorer">Be your own explorer</ng-container>
+<!--              <ng-container i18n="shared.be-your-own-explorer">Be your own explorer</ng-container>-->
               <ng-template [ngIf]="locale.substr(0, 2) === 'en'">&trade;</ng-template>
             }
           </p>
@@ -56,15 +56,15 @@
             <span *ngIf="user" i18n="shared.my-account" class="nowrap">My Account</span>
             <span *ngIf="!user" i18n="shared.sign-in" class="nowrap">Sign In</span>
           </a>
-          <p class="explore-tagline-desktop">
-            @if (officialMempoolSpace) {
-              <ng-container i18n="@@7deec1c1520f06170e1f8e8ddfbe4532312f638f">Explore the full Bitgesell ecosystem</ng-container>
-              <ng-template [ngIf]="locale.substr(0, 2) === 'en'">&reg;</ng-template>
-            } @else {
-              <ng-container i18n="shared.be-your-own-explorer">Be your own explorer</ng-container>
-              <ng-template [ngIf]="locale.substr(0, 2) === 'en'">&trade;</ng-template>
-            }
-          </p>
+<!--          <p class="explore-tagline-desktop">-->
+<!--            @if (officialMempoolSpace) {-->
+<!--&lt;!&ndash;              <ng-container i18n="@@7deec1c1520f06170e1f8e8ddfbe4532312f638f">Explore the full Bitgesell ecosystem</ng-container>&ndash;&gt;-->
+<!--&lt;!&ndash;              <ng-template [ngIf]="locale.substr(0, 2) === 'en'">&reg;</ng-template>&ndash;&gt;-->
+<!--            } @else {-->
+<!--              <ng-container i18n="shared.be-your-own-explorer">Be your own explorer</ng-container>-->
+<!--              <ng-template [ngIf]="locale.substr(0, 2) === 'en'">&trade;</ng-template>-->
+<!--            }-->
+<!--          </p>-->
         }
       </div>
     </div>
@@ -86,7 +86,7 @@
           <p><a [routerLink]="['/docs/faq']" fragment="what-is-a-block-explorer" i18n="faq.what-is-a-block-exlorer">What is a block explorer?</a></p>
           <p><a [routerLink]="['/docs/faq']" fragment="what-is-a-mempool-explorer" i18n="faq.what-is-a-mempool-exlorer">What is a mempool explorer?</a></p>
           <p><a [routerLink]="['/docs/faq']" fragment="why-is-transaction-stuck-in-mempool" i18n="faq.why-isnt-my-transaction-confirming">Why isn't my transaction confirming?</a></p>
-          <p><a [routerLink]="['/docs/faq']" fragment="host-my-own-instance-raspberry-pi"><ng-container i18n="shared.be-your-own-explorer">Be your own explorer</ng-container><ng-template [ngIf]="locale.substr(0, 2) === 'en'">&trade;</ng-template></a></p>
+<!--          <p><a [routerLink]="['/docs/faq']" fragment="host-my-own-instance-raspberry-pi"><ng-container i18n="shared.be-your-own-explorer">Be your own explorer</ng-container><ng-template [ngIf]="locale.substr(0, 2) === 'en'">&trade;</ng-template></a></p>-->
           <p><a [routerLink]="['/docs/faq' | relativeUrl]" i18n="faq.more-faq">More FAQs &raquo;</a></p>
           <p *ngIf="mempoolSpaceBuild"><a [routerLink]="['/research' | relativeUrl]" i18n="mempool-research">Research</a></p>
         </div>
