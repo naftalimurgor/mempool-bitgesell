@@ -30,6 +30,6 @@
     window.__env.PUBLIC_ACCELERATIONS = ${__PUBLIC_ACCELERATIONS__};
     window.__env.STRATUM_ENABLED = ${__STRATUM_ENABLED__};
     window.__env.SERVICES_API = '${__SERVICES_API__}';
-    window.__env.GIT_COMMIT_HASH = '90d04ccd3';
+    window.__env.GIT_COMMIT_HASH = 'd86f8c97f';
     window.__env.PACKAGE_JSON_VERSION = '3.3-dev';
   }(this));

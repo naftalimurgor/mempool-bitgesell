@@ -30,6 +30,6 @@
     window.__env.PUBLIC_ACCELERATIONS = false;
     window.__env.STRATUM_ENABLED = false;
     window.__env.SERVICES_API = 'http://198.96.88.103:8999/api/v1/services';
-    window.__env.GIT_COMMIT_HASH = '90d04ccd3';
+    window.__env.GIT_COMMIT_HASH = 'd86f8c97f';
     window.__env.PACKAGE_JSON_VERSION = '3.3-dev';
   }((typeof global !== 'undefined') ? global : this));
