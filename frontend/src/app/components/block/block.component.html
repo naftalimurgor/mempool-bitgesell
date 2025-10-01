@@ -162,9 +162,9 @@
           <td i18n="block.subsidy-and-fees|Total subsidy and fees in a block">Subsidy + fees</td>
           <td>
             <app-amount [satoshis]="block.extras.reward" digitsInfo="1.2-3" [noFiat]="true"></app-amount>
-            <span class="fiat">
-              <app-fiat [blockConversion]="blockConversion" [value]="(blockSubsidy + fees) * 100000000" digitsInfo="1.0-0"></app-fiat>
-            </span>
+<!--            <span class="fiat">-->
+<!--              <app-fiat [blockConversion]="blockConversion" [value]="(blockSubsidy + fees) * 100000000" digitsInfo="1.0-0"></app-fiat>-->
+<!--            </span>-->
           </td>
         </tr>
       </ng-template>
